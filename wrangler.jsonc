@@ -1,0 +1,15 @@
+{
+  "$schema": "frontend/node_modules/wrangler/config-schema.json",
+  "name": "jalsankalp-nesfic-d01",
+  "main": "frontend/worker/index.ts",
+  "compatibility_date": "2026-11-26",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./frontend/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  }
+}

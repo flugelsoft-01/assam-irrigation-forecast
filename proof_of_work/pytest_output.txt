@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.6, pytest-8.3.4, pluggy-1.7.0 -- /Users/kalyan/Downloads/2026/Nov2026/Irrigation-Demand-Forecast-D-01/backend/.venv/bin/python3.13
+cachedir: .pytest_cache
+rootdir: /Users/kalyan/Downloads/2026/Nov2026/Irrigation-Demand-Forecast-D-01
+plugins: anyio-4.16.0
+collecting ... collected 6 items
+
+backend/tests/test_api_and_hydrology.py::test_fao56_et0_bounds PASSED    [ 16%]
+backend/tests/test_api_and_hydrology.py::test_crop_kc_progression PASSED [ 33%]
+backend/tests/test_api_and_hydrology.py::test_effective_rainfall_monotonic PASSED [ 50%]
+backend/tests/test_api_and_hydrology.py::test_api_schemes_and_forecast PASSED [ 66%]
+backend/tests/test_api_and_hydrology.py::test_schedule_capacity_and_approval_audit PASSED [ 83%]
+backend/tests/test_api_and_hydrology.py::test_180_day_simulation PASSED  [100%]
+
+=============================== warnings summary ===============================
+backend/.venv/lib/python3.13/site-packages/starlette/testclient.py:40
+  /Users/kalyan/Downloads/2026/Nov2026/Irrigation-Demand-Forecast-D-01/backend/.venv/lib/python3.13/site-packages/starlette/testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 6 passed, 1 warning in 2.57s =========================

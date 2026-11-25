@@ -1,0 +1,16 @@
+{
+  "scheme_name": "Kalangpar Minor Irrigation Scheme (Synthetic Pilot)",
+  "forecast_7d_m3": 64133.6,
+  "baseline_7d_m3": 212333.1,
+  "water_saved_pct": 77.7,
+  "water_saved_m3": 164911.7,
+  "tail_adequacy_pct": 75.5,
+  "sim_mape_pct": 3.51,
+  "sim_rmse_m3": 795.8,
+  "sim_ci80_cov_pct": 98.9,
+  "sim_over_saved_m3": 1028927.0,
+  "sim_over_red_pct": 18.8,
+  "static_tail_def_days": 0,
+  "smart_tail_def_days": 0,
+  "tail_def_red_pct": 0.0
+}

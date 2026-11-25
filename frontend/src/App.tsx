@@ -870,6 +870,47 @@ export default function App() {
           </>
         )}
       </main>
+
+      <footer className="mt-12 border-t border-slate-200 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
+          <div className="rounded-lg border border-slate-200 bg-slate-50 p-3.5 text-xs leading-relaxed text-slate-600">
+            <strong className="text-slate-800">Disclaimer:</strong> JalSankalp is a prototype decision-support
+            application built for the North East Seva First Innovation Challenge (
+            <a
+              href="https://startup.assam.gov.in/nesfic26/problem-statements/nesfic-d-01"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-teal-700 underline hover:text-teal-800"
+            >
+              NESFIC-D-01
+            </a>
+            ) using public FAO-56 agronomic models and clearly labelled synthetic Assam Minor Irrigation
+            datasets. No unconfirmed departmental data is assumed. All forecasts and schedules remain advisory
+            for authorized Irrigation Department staff; no autonomous gate or pump actuation is performed.
+          </div>
+
+          <div className="mt-4 flex flex-col items-start justify-between gap-2 text-xs text-slate-500 sm:flex-row sm:items-center">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+              <span>
+                <strong className="text-slate-700">Lead Applicant:</strong> Kalyanjit Hatibaruah
+              </span>
+              <span>·</span>
+              <span>Guwahati, Assam, India</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+              <a
+                href="https://github.com/flugelsoft-01/assam-irrigation-forecast"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 hover:text-teal-700 underline"
+              >
+                Source Repository
+              </a>
+              <span>&copy; {new Date().getFullYear()} Flugelsoft Labs. All rights reserved.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

@@ -3,8 +3,10 @@ import {
   Activity,
   AlertTriangle,
   BarChart3,
+  BookOpen,
   CheckCircle2,
   CloudRain,
+  Cpu,
   Droplets,
   Info,
   MapPin,
@@ -26,6 +28,7 @@ import {
 } from 'recharts'
 import { CommandMap } from './components/CommandMap'
 import { ForecastChart } from './components/ForecastChart'
+import { TechnicalGlossaryView, TutorialView } from './components/InfoViews'
 import type {
   AlertItem,
   AuditLogEntry,
@@ -36,7 +39,7 @@ import type {
   SimulationMetrics,
 } from './types'
 
-type TabId = 'forecast' | 'schedules' | 'alerts' | 'simulation'
+type TabId = 'forecast' | 'schedules' | 'alerts' | 'simulation' | 'tutorial' | 'technical'
 
 export default function App() {
   const [schemes, setSchemes] = useState<SchemeSummary[]>([])
@@ -195,7 +198,31 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2.5">
+            <button
+              type="button"
+              onClick={() => setTab('tutorial')}
+              className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-colors ${
+                tab === 'tutorial'
+                  ? 'bg-teal-700 text-white'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <BookOpen className="h-3.5 w-3.5" />
+              Tutorial
+            </button>
+            <button
+              type="button"
+              onClick={() => setTab('technical')}
+              className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-colors ${
+                tab === 'technical'
+                  ? 'bg-teal-700 text-white'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              }`}
+            >
+              <Cpu className="h-3.5 w-3.5" />
+              Technical &amp; Glossary
+            </button>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-amber-800 border border-amber-200">
               <Info className="h-3.5 w-3.5" />
               Synthetic &amp; Public Data Prototype
@@ -867,6 +894,11 @@ export default function App() {
                 </div>
               </div>
             )}
+            {/* TAB 5: TUTORIAL */}
+            {tab === 'tutorial' && <TutorialView />}
+
+            {/* TAB 6: TECHNICAL & GLOSSARY */}
+            {tab === 'technical' && <TechnicalGlossaryView />}
           </>
         )}
       </main>
